@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="signup.html">Signup</a>
+                                    <a href="{{ route('register') }}">Signup</a>
                                 </li>
                             </ul>
                         </div>

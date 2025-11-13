@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="signin.html">Signin</a>
+                                    <a href="{{ route('login') }}">Signin</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,7 +68,7 @@
                                         track your orders in your account and more.</span>
                                     <div class="u-s-m-b-15">
 
-                                        <a class="l-f-o__create-link btn--e-transparent-brand-b-2" href="signup.html">CREATE
+                                        <a class="l-f-o__create-link btn--e-transparent-brand-b-2" href="{{ route('register') }}">CREATE
                                             AN ACCOUNT</a>
                                     </div>
                                     <h1 class="gl-h1">SIGNIN</h1>
@@ -113,7 +113,7 @@
                                             </div>
                                             <div class="u-s-m-b-30">
 
-                                                <a class="gl-link" href="lost-password.html">Lost Your Password?</a>
+                                                <a class="gl-link" href="{{ route('password.request') }}">Lost Your Password?</a>
                                             </div>
                                         </div>
                                         <div class="u-s-m-b-30">

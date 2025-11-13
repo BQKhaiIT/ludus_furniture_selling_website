@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="lost-password.html">Reset</a>
+                                    <a href="{{ route('password.request') }}">Reset</a>
                                 </li>
                             </ul>
                         </div>
@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="u-s-m-b-30">
 
-                                            <a class="gl-link" href="signin.html">Back to Login</a>
+                                            <a class="gl-link" href="{{ route('login') }}">Back to Login</a>
                                         </div>
                                     </form>
                                 </div>

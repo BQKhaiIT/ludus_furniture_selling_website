@@ -32,7 +32,7 @@
 
                                 <span class="bp-detail__publish-date">
 
-                                    <a href="blog-right-sidebar.html">
+                                    <a href="{{ route('blog.RightSidebar') }}">
 
                                         <span>25 March 2018</span></a></span></span>
 
@@ -40,28 +40,28 @@
 
                                 <span class="bp-detail__author">
 
-                                    <a href="blog-right-sidebar.html">Dayle</a></span></span>
+                                    <a href="{{ route('blog.RightSidebar') }}">Dayle</a></span></span>
 
                             <span class="bp-detail__stat-wrap">
 
                                 <span class="bp-detail__category">
 
-                                    <a href="blog-right-sidebar.html">Learning</a>
+                                    <a href="{{ route('blog.RightSidebar') }}">Learning</a>
 
-                                    <a href="blog-right-sidebar.html">News</a>
+                                    <a href="{{ route('blog.RightSidebar') }}">News</a>
 
-                                    <a href="blog-right-sidebar.html">Health</a></span></span></div>
+                                    <a href="{{ route('blog.RightSidebar') }}">Health</a></span></span></div>
 
                         <span class="bp-detail__h1">
 
-                            <a href="blog-detail.html">Wait till its open</a></span>
+                            <a href="{{ route('blog.detail') }}">Wait till its open</a></span>
                         <div class="blog-t-w">
 
-                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Travel</a>
+                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="{{ route('blog.RightSidebar') }}">Travel</a>
 
-                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Culture</a>
+                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="{{ route('blog.RightSidebar') }}">Culture</a>
 
-                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Place</a></div>
+                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="{{ route('blog.RightSidebar') }}">Place</a></div>
                         <p class="bp-detail__p">Lorem Ipsum is simply dummy text of the <em>printing</em> and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
 
                             <a href="#">printer </a>took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -92,10 +92,10 @@
                         <div class="gl-l-r bp-detail__postnp">
                             <div>
 
-                                <a href="blog-detail.html">Previous Post</a></div>
+                                <a href="{{ route('blog.detail') }}">Previous Post</a></div>
                             <div>
 
-                                <a href="blog-detail.html">Next Post</a></div>
+                                <a href="{{ route('blog.detail') }}">Next Post</a></div>
                         </div>
                     </div>
                 </div>

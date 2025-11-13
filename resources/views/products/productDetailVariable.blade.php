@@ -1,8 +1,10 @@
+{{-- 1. Kế thừa file layout chính --}}
 @extends('layouts.app')
 
 {{-- 2. Đặt tiêu đề riêng cho trang này (sẽ thay thế @yield('title')) --}}
 {{-- Trong thực tế, bạn sẽ dùng biến động: @section('title', $post->title) --}}
 @section('title', 'Ludus - Chi Tiết Bài Viết')
+
 
 {{-- 3. Bắt đầu phần nội dung (sẽ thay thế @yield('content')) --}}
 @section('content')
@@ -44,10 +46,10 @@
                         <div class="pd u-s-m-b-30">
                             <div class="slider-fouc pd-wrap">
                                 <div id="pd-o-initiate">
-                                    <div class="pd-o-img-wrap no-zoom" data-model="model3d/ASSET.glb">
-                                        <div id="model3D"
-                                            style="width:100%; height:400px; background:#f1f1f1; border-radius:8px;">
-                                        </div>
+                                    <div class="pd-o-img-wrap" data-src="images/product/product-d-1.jpg">
+
+                                        <img class="u-img-fluid" src="images/product/product-d-1.jpg"
+                                            data-zoom-image="images/product/product-d-1.jpg" alt="">
                                     </div>
                                     <div class="pd-o-img-wrap" data-src="images/product/product-d-2.jpg">
 
@@ -190,6 +192,89 @@
                             </div>
                             <div class="u-s-m-b-15">
                                 <form class="pd-detail__form">
+                                    <div class="u-s-m-b-15">
+
+                                        <span class="pd-detail__label u-s-m-b-8">Color:</span>
+                                        <div class="pd-detail__color">
+                                            <div class="color__radio">
+
+                                                <input type="radio" id="jet" name="color" checked>
+
+                                                <label class="color__radio-label" for="jet"
+                                                    style="background-color: #333333"></label>
+                                            </div>
+                                            <div class="color__radio">
+
+                                                <input type="radio" id="folly" name="color">
+
+                                                <label class="color__radio-label" for="folly"
+                                                    style="background-color: #FF0055"></label>
+                                            </div>
+                                            <div class="color__radio">
+
+                                                <input type="radio" id="yellow" name="color">
+
+                                                <label class="color__radio-label" for="yellow"
+                                                    style="background-color: #FFFF00"></label>
+                                            </div>
+                                            <div class="color__radio">
+
+                                                <input type="radio" id="granite-gray" name="color">
+
+                                                <label class="color__radio-label" for="granite-gray"
+                                                    style="background-color: #605F5E"></label>
+                                            </div>
+                                            <div class="color__radio">
+
+                                                <input type="radio" id="space-cadet" name="color">
+
+                                                <label class="color__radio-label" for="space-cadet"
+                                                    style="background-color: #1D3461"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+
+                                        <span class="pd-detail__label u-s-m-b-8">Size:</span>
+                                        <div class="pd-detail__size">
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="xs" name="size" checked>
+
+                                                <label class="size__radio-label" for="xs">XS</label>
+                                            </div>
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="small" name="size">
+
+                                                <label class="size__radio-label" for="xxl">Small</label>
+                                            </div>
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="medium" name="size">
+
+                                                <label class="size__radio-label" for="medium">Medium</label>
+                                            </div>
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="large" name="size">
+
+                                                <label class="size__radio-label" for="xxl">Large</label>
+                                            </div>
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="xl" name="size">
+
+                                                <label class="size__radio-label" for="xl">XL</label>
+                                            </div>
+                                            <div class="size__radio">
+
+                                                <input type="radio" id="xxl" name="size">
+
+                                                <label class="size__radio-label" for="xxl">XXL</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="pd-detail-inline-2">
                                         <div class="u-s-m-b-15">
 
@@ -247,7 +332,7 @@
                                 <ul class="nav pd-tab__list">
                                     <li class="nav-item">
 
-                                        <a class="nav-link active" data-toggle="tab" href="#pd-desc">DESCRIPTION</a>
+                                        <a class="nav-link" data-toggle="tab" href="#pd-desc">DESCRIPTION</a>
                                     </li>
                                     <li class="nav-item">
 
@@ -255,7 +340,7 @@
                                     </li>
                                     <li class="nav-item">
 
-                                        <a class="nav-link" id="view-review" data-toggle="tab" href="#pd-rev">REVIEWS
+                                        <a class="nav-link active" id="view-review" data-toggle="tab" href="#pd-rev">REVIEWS
 
                                             <span>(23)</span></a>
                                     </li>
@@ -264,7 +349,7 @@
                             <div class="tab-content">
 
                                 <!--====== Tab 1 ======-->
-                                <div class="tab-pane fade show active" id="pd-desc">
+                                <div class="tab-pane" id="pd-desc">
                                     <div class="pd-tab__desc">
                                         <div class="u-s-m-b-15">
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -367,7 +452,7 @@
 
 
                                 <!--====== Tab 3 ======-->
-                                <div class="tab-pane" id="pd-rev">
+                                <div class="tab-pane fade show active" id="pd-rev">
                                     <div class="pd-tab__rev">
                                         <div class="u-s-m-b-30">
                                             <div class="pd-tab__rev-score">
@@ -1117,8 +1202,6 @@
     </div>
     <!--====== End - App Content ======-->
 
-    <!--====== Modal Section ======-->
-
 
     <!--====== Quick Look Modal ======-->
     <div class="modal fade" id="quick-look">
@@ -1396,7 +1479,5 @@
             </div>
         </div>
     </div>
-    <!--====== End - Add to Cart Modal ======-->
-    <!--====== End - Modal Section ======-->
 @endsection
 {{-- 4. Kết thúc phần nội dung --}}

@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="dash-my-order.html">My Account</a>
+                                    <a href="{{ route('dash.my_order') }}">My Account</a>
                                 </li>
                             </ul>
                         </div>
@@ -54,31 +54,31 @@
                                         <ul class="dash__f-list">
                                             <li>
 
-                                                <a href="dashboard.html">Manage My Account</a>
+                                                <a href="{{ route('dashboard') }}">Manage My Account</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-profile.html">My Profile</a>
+                                                <a href="{{ route('dash.my_profile') }}">My Profile</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-address-book.html">Address Book</a>
+                                                <a href="{{ route('dash.address_book') }}">Address Book</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-track-order.html">Track Order</a>
+                                                <a href="{{ route('dash.track_order') }}">Track Order</a>
                                             </li>
                                             <li>
 
-                                                <a class="dash-active" href="dash-my-order.html">My Orders</a>
+                                                <a class="dash-active" href="{{ route('dash.my_order') }}">My Orders</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-payment-option.html">My Payment Options</a>
+                                                <a href="{{ route('dash.payment_option') }}">My Payment Options</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-cancellation.html">My Returns & Cancellations</a>
+                                                <a href="{{ route('dash.cancellation') }}">My Returns & Cancellations</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -158,7 +158,7 @@
                                                         <div>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -206,7 +206,7 @@
                                                         <div>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -253,7 +253,7 @@
                                                         <div>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </div>

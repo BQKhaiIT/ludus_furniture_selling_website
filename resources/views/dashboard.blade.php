@@ -22,11 +22,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="dashboard.html">My Account</a>
+                                    <a href="{{ route('dashboard') }}">My Account</a>
                                 </li>
                             </ul>
                         </div>
@@ -55,31 +55,31 @@
                                         <ul class="dash__f-list">
                                             <li>
 
-                                                <a class="dash-active" href="dashboard.html">Manage My Account</a>
+                                                <a class="dash-active" href="{{ route('dashboard') }}">Manage My Account</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-profile.html">My Profile</a>
+                                                <a href="{{ route('dash.my_profile') }}">My Profile</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-address-book.html">Address Book</a>
+                                                <a href="{{ route('dash.address_book') }}">Address Book</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-track-order.html">Track Order</a>
+                                                <a href="{{ route('dash.track_order') }}">Track Order</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-order.html">My Orders</a>
+                                                <a href="{{ route('dash.my_order') }}">My Orders</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-payment-option.html">My Payment Options</a>
+                                                <a href="{{ route('dash.payment_option') }}">My Payment Options</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-cancellation.html">My Returns & Cancellations</a>
+                                                <a href="{{ route('dash.cancellation') }}">My Returns & Cancellations</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -140,7 +140,7 @@
                                                         <h2 class="dash__h2 u-s-m-b-8">PERSONAL PROFILE</h2>
                                                         <div class="dash__link dash__link--secondary u-s-m-b-8">
 
-                                                            <a href="dash-edit-profile.html">Edit</a>
+                                                            <a href="{{ route('dash.EditProfile') }}">Edit</a>
                                                         </div>
 
                                                         <span class="dash__text">John Doe</span>
@@ -163,7 +163,7 @@
                                                             Address</span>
                                                         <div class="dash__link dash__link--secondary u-s-m-b-8">
 
-                                                            <a href="dash-address-book.html">Edit</a>
+                                                            <a href="{{ route('dash.address_book') }}">Edit</a>
                                                         </div>
 
                                                         <span class="dash__text">4247 Ashford Drive Virginia - VA-20006
@@ -220,7 +220,7 @@
                                                             <span>$126.00</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -241,7 +241,7 @@
                                                             <span>$126.00</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -262,7 +262,7 @@
                                                             <span>$126.00</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -283,7 +283,7 @@
                                                             <span>$126.00</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="{{ route('dash.ManageOrder') }}">MANAGE</a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -315,7 +315,7 @@
 
                             <span class="gl-modal-text">I have read and understood</span>
 
-                            <a class="d_modal__link" href="dashboard.html">Ludus Privacy Policy</a>
+                            <a class="d_modal__link" href="{{ route('dashboard') }}">Ludus Privacy Policy</a>
                         </div>
                         <div class="gl-modal-btn-group">
 

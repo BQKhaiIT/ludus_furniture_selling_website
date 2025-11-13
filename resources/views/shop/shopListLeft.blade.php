@@ -8,7 +8,6 @@
 
 {{-- 3. Bắt đầu phần nội dung (sẽ thay thế @yield('content')) --}}
 @section('content')
-    <!--====== App Content ======-->
     <div class="app-content">
 
         <!--====== Section 1 ======-->
@@ -21,9 +20,9 @@
 
                                 <span>FILTERS</span>
                             </h1>
-                            <div class="shop-w-master__sidebar">
+                            <div class="shop-w-master__sidebar sidebar--bg-snow">
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">CATEGORY</h1>
 
@@ -738,7 +737,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">RATING</h1>
 
@@ -819,7 +818,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">SHIPPING</h1>
 
@@ -847,7 +846,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">PRICE</h1>
 
@@ -883,7 +882,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">MANUFACTURER</h1>
 
@@ -947,7 +946,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">COLOR</h1>
 
@@ -1016,7 +1015,7 @@
                                     </div>
                                 </div>
                                 <div class="u-s-m-b-30">
-                                    <div class="shop-w shop-w--style">
+                                    <div class="shop-w">
                                         <div class="shop-w__intro-wrap">
                                             <h1 class="shop-w__h">SIZE</h1>
 
@@ -1142,9 +1141,9 @@
                                 <div class="shop-p__tool-style">
                                     <div class="tool-style__group u-s-m-b-8">
 
-                                        <span class="js-shop-grid-target is-active">Grid</span>
+                                        <span class="js-shop-grid-target">Grid</span>
 
-                                        <span class="js-shop-list-target">List</span>
+                                        <span class="js-shop-list-target is-active">List</span>
                                     </div>
                                     <form>
                                         <div class="tool-style__form-wrap">
@@ -1167,7 +1166,7 @@
                                 </div>
                             </div>
                             <div class="shop-p__collection">
-                                <div class="row is-grid-active">
+                                <div class="row is-list-active">
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="product-m">
                                             <div class="product-m__thumb">
@@ -1839,23 +1838,23 @@
                                 <ul class="shop-p__pagination">
                                     <li class="is-active">
 
-                                        <a href="{{ route('shop.side_v2') }}">1</a>
+                                        <a href="{{ route('shop.ListLeft') }}">1</a>
                                     </li>
                                     <li>
 
-                                        <a href="{{ route('shop.side_v2') }}">2</a>
+                                        <a href="{{ route('shop.ListLeft') }}">2</a>
                                     </li>
                                     <li>
 
-                                        <a href="{{ route('shop.side_v2') }}">3</a>
+                                        <a href="{{ route('shop.ListLeft') }}">3</a>
                                     </li>
                                     <li>
 
-                                        <a href="{{ route('shop.side_v2') }}">4</a>
+                                        <a href="{{ route('shop.ListLeft') }}">4</a>
                                     </li>
                                     <li>
 
-                                        <a class="fas fa-angle-right" href="{{ route('shop.side_v2') }}"></a>
+                                        <a class="fas fa-angle-right" href="{{ route('shop.ListLeft') }}"></a>
                                     </li>
                                 </ul>
                                 <!--====== End - Pagination ======-->
@@ -2093,8 +2092,6 @@
         </div>
     </div>
     <!--====== End - Quick Look Modal ======-->
-
-
     <!--====== Add to Cart Modal ======-->
     <div class="modal fade" id="add-to-cart">
         <div class="modal-dialog modal-dialog-centered">
@@ -2144,6 +2141,5 @@
             </div>
         </div>
     </div>
-    <!--====== End - Add to Cart Modal ======-->
 @endsection
 {{-- 4. Kết thúc phần nội dung --}}

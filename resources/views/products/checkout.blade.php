@@ -21,11 +21,11 @@
                         <ul class="breadcrumb__list">
                             <li class="has-separator">
 
-                                <a href="index.html">Home</a>
+                                <a href="{{ route('shop.index') }}">Home</a>
                             </li>
                             <li class="is-marked">
 
-                                <a href="checkout.html">Checkout</a>
+                                <a href="{{ route('checkout') }}">Checkout</a>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +81,7 @@
                                                 </div>
                                                 <div class="u-s-m-b-15">
 
-                                                    <a class="gl-link" href="lost-password.html">Lost Your Password?</a>
+                                                    <a class="gl-link" href="{{ route('password.request') }}">Lost Your Password?</a>
                                                 </div>
                                             </div>
 
@@ -345,7 +345,7 @@
 
                                                     <span class="o-card__name">
 
-                                                        <a href="product-detail.html">Yellow Wireless
+                                                        <a href="{{ route('products.detail') }}">Yellow Wireless
                                                             Headphone</a></span>
 
                                                     <span class="o-card__quantity">Quantity x 1</span>
@@ -367,7 +367,7 @@
 
                                                     <span class="o-card__name">
 
-                                                        <a href="product-detail.html">Nikon DSLR Camera 4k</a></span>
+                                                        <a href="{{ route('products.detail') }}">Nikon DSLR Camera 4k</a></span>
 
                                                     <span class="o-card__quantity">Quantity x 1</span>
 
@@ -388,7 +388,7 @@
 
                                                     <span class="o-card__name">
 
-                                                        <a href="product-detail.html">New Dress D Nice
+                                                        <a href="{{ route('products.detail') }}">New Dress D Nice
                                                             Elegant</a></span>
 
                                                     <span class="o-card__quantity">Quantity x 1</span>
@@ -410,7 +410,7 @@
 
                                                     <span class="o-card__name">
 
-                                                        <a href="product-detail.html">New Fashion D Nice
+                                                        <a href="{{ route('products.detail') }}">New Fashion D Nice
                                                             Elegant</a></span>
 
                                                     <span class="o-card__quantity">Quantity x 1</span>

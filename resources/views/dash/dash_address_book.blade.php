@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="dash-address-book.html">My Account</a>
+                                    <a href="{{ route('dash.address_book') }}">My Account</a>
                                 </li>
                             </ul>
                         </div>
@@ -54,31 +54,31 @@
                                         <ul class="dash__f-list">
                                             <li>
 
-                                                <a href="dashboard.html">Manage My Account</a>
+                                                <a href="{{ route('dashboard') }}">Manage My Account</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-profile.html">My Profile</a>
+                                                <a href="{{ route('dash.my_profile') }}">My Profile</a>
                                             </li>
                                             <li>
 
-                                                <a class="dash-active" href="dash-address-book.html">Address Book</a>
+                                                <a class="dash-active" href="{{ route('dash.address_book') }}">Address Book</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-track-order.html">Track Order</a>
+                                                <a href="{{ route('dash.track_order') }}">Track Order</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-order.html">My Orders</a>
+                                                <a href="{{ route('dash.my_order') }}">My Orders</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-payment-option.html">My Payment Options</a>
+                                                <a href="{{ route('dash.payment_option') }}">My Payment Options</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-cancellation.html">My Returns & Cancellations</a>
+                                                <a href="{{ route('dash.cancellation') }}">My Returns & Cancellations</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -133,12 +133,12 @@
 
                                                 <span class="dash__link dash__link--black u-s-m-r-8">
 
-                                                    <a href="dash-address-make-default.html">Make default shipping
+                                                    <a href="{{ route('dash.AddressMakeDefault') }}">Make default shipping
                                                         address</a></span>
 
                                                 <span class="dash__link dash__link--black">
 
-                                                    <a href="dash-address-make-default.html">Make default shipping
+                                                    <a href="{{ route('dash.AddressMakeDefault') }}">Make default shipping
                                                         address</a></span>
                                             </div>
                                         </div>
@@ -162,7 +162,7 @@
                                                     <td>
 
                                                         <a class="address-book-edit btn--e-transparent-platinum-b-2"
-                                                            href="dash-address-edit.html">Edit</a>
+                                                            href="{{ route('dash.AddressEdit') }}">Edit</a>
                                                     </td>
                                                     <td>John Doe</td>
                                                     <td>4247 Ashford Drive Virginia VA-20006 USA</td>
@@ -177,7 +177,7 @@
                                                     <td>
 
                                                         <a class="address-book-edit btn--e-transparent-platinum-b-2"
-                                                            href="dash-address-edit.html">Edit</a>
+                                                            href="{{ route('dash.AddressEdit') }}">Edit</a>
                                                     </td>
                                                     <td>Doe John</td>
                                                     <td>1484 Abner Road</td>
@@ -191,7 +191,7 @@
                                 </div>
                                 <div>
 
-                                    <a class="dash__custom-link btn--e-brand-b-2" href="dash-address-add.html"><i
+                                    <a class="dash__custom-link btn--e-brand-b-2" href="{{ route('dash.AddressAdd') }}"><i
                                             class="fas fa-plus u-s-m-r-8"></i>
 
                                         <span>Add New Address</span></a>

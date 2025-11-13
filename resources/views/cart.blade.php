@@ -21,11 +21,11 @@
                             <ul class="breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ route('shop.index') }}">Home</a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="cart.html">Cart</a>
+                                    <a href="{{ route('cart') }}">Cart</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,12 +76,12 @@
 
                                                         <span class="table-p__name">
 
-                                                            <a href="product-detail.html">Yellow Wireless
+                                                            <a href="{{ route('products.detail') }}">Yellow Wireless
                                                                 Headphone</a></span>
 
                                                         <span class="table-p__category">
 
-                                                            <a href="shop-side-version-2.html">Electronics</a></span>
+                                                            <a href="{{ route('shop.side_v2') }}">Electronics</a></span>
                                                         <ul class="table-p__variant-list">
                                                             <li>
 
@@ -138,12 +138,12 @@
 
                                                         <span class="table-p__name">
 
-                                                            <a href="product-detail.html">New Dress D Nice
+                                                            <a href="{{ route('products.detail') }}">New Dress D Nice
                                                                 Elegant</a></span>
 
                                                         <span class="table-p__category">
 
-                                                            <a href="shop-side-version-2.html">Women Clothing</a></span>
+                                                            <a href="{{ route('shop.side_v2') }}">Women Clothing</a></span>
                                                         <ul class="table-p__variant-list">
                                                             <li>
 
@@ -200,12 +200,12 @@
 
                                                         <span class="table-p__name">
 
-                                                            <a href="product-detail.html">New Fashion D Nice
+                                                            <a href="{{ route('products.detail') }}">New Fashion D Nice
                                                                 Elegant</a></span>
 
                                                         <span class="table-p__category">
 
-                                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
+                                                            <a href="{{ route('shop.side_v2') }}">Men Clothing</a></span>
                                                         <ul class="table-p__variant-list">
                                                             <li>
 
@@ -255,18 +255,18 @@
                             <div class="route-box">
                                 <div class="route-box__g1">
 
-                                    <a class="route-box__link" href="shop-side-version-2.html"><i
+                                    <a class="route-box__link" href="{{ route('shop.side_v2') }}"><i
                                             class="fas fa-long-arrow-alt-left"></i>
 
                                         <span>CONTINUE SHOPPING</span></a>
                                 </div>
                                 <div class="route-box__g2">
 
-                                    <a class="route-box__link" href="cart.html"><i class="fas fa-trash"></i>
+                                    <a class="route-box__link" href="{{ route('cart') }}"><i class="fas fa-trash"></i>
 
                                         <span>CLEAR CART</span></a>
 
-                                    <a class="route-box__link" href="cart.html"><i class="fas fa-sync"></i>
+                                    <a class="route-box__link" href="{{ route('cart') }}"><i class="fas fa-sync"></i>
 
                                         <span>UPDATE CART</span></a>
                                 </div>
@@ -332,7 +332,7 @@
                                             <div class="u-s-m-b-30">
 
                                                 <a class="f-cart__ship-link btn--e-transparent-brand-b-2"
-                                                    href="cart.html">CALCULATE SHIPPING</a>
+                                                    href="{{ route('cart') }}">CALCULATE SHIPPING</a>
                                             </div>
 
                                             <span class="gl-text">Note: There are some countries where free shipping is

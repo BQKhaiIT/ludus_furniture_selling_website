@@ -55,23 +55,23 @@
                                         <ul>
                                             <li>
 
-                                                <a href="cart.html">Cart</a>
+                                                <a href="{{ route('cart') }}">Cart</a>
                                             </li>
                                             <li>
 
-                                                <a href="dashboard.html">Account</a>
+                                                <a href="{{ route('dashboard') }}">Account</a>
                                             </li>
                                             <li>
 
-                                                <a href="shop-side-version-2.html">Manufacturer</a>
+                                                <a href="{{ route('shop.side_v2') }}">Manufacturer</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-payment-option.html">Finance</a>
+                                                <a href="{{ route('dash.payment_option') }}">Finance</a>
                                             </li>
                                             <li>
 
-                                                <a href="shop-side-version-2.html">Shop</a>
+                                                <a href="{{ route('shop.side_v2') }}">Shop</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -85,23 +85,23 @@
                                         <ul>
                                             <li>
 
-                                                <a href="about.html">About us</a>
+                                                <a href="{{ route('about') }}">About us</a>
                                             </li>
                                             <li>
 
-                                                <a href="contact.html">Contact Us</a>
+                                                <a href="{{ route('contact') }}">Contact Us</a>
                                             </li>
                                             <li>
 
-                                                <a href="index.html">Sitemap</a>
+                                                <a href="{{ route('shop.index') }}">Sitemap</a>
                                             </li>
                                             <li>
 
-                                                <a href="dash-my-order.html">Delivery</a>
+                                                <a href="{{ route('dash.my_order') }}">Delivery</a>
                                             </li>
                                             <li>
 
-                                                <a href="shop-side-version-2.html">Store</a>
+                                                <a href="{{ route('shop.side_v2') }}">Store</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -159,7 +159,7 @@
 
                                 <span>Copyright © 2018</span>
 
-                                <a href="index.html">Reshop</a>
+                                <a href="{{ route('shop.index') }}">Reshop</a>
 
                                 <span>All Right Reserved</span>
                             </div>
