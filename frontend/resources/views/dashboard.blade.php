@@ -28,10 +28,6 @@
 
                                     <a href="{{ route('dashboard') }}">My Account</a>
                                 </li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button class="btn btn-danger mt-3">Logout</button>
-                                </form>
                             </ul>
                         </div>
                     </div>
@@ -55,8 +51,7 @@
                                 <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
                                     <div class="dash__pad-1">
 
-                                        <span class="dash__text u-s-m-b-16">Hello,
-                                            {{ request()->auth_user['fullname'] ?? request()->auth_user['email'] }}</span>
+                                        <span class="dash__text u-s-m-b-16">Hello, John Doe</span>
                                         <ul class="dash__f-list">
                                             <li>
 
@@ -135,7 +130,7 @@
                                     <div class="dash__pad-2">
                                         <h1 class="dash__h1 u-s-m-b-14">Manage My Account</h1>
 
-                                        <span class="dash__text u-s-m-b-30">From your My Account Dashboard you have the
+                                        <span class="dash__text u-s-m-b-30">From  My Account Dashboard you have the
                                             ability to view a snapshot of your recent account activity and update your
                                             account information. Select a link below to view or edit information.</span>
                                         <div class="row">
@@ -148,10 +143,9 @@
                                                             <a href="{{ route('dash.EditProfile') }}">Edit</a>
                                                         </div>
 
-                                                        <span
-                                                            class="dash__text">{{ request()->auth_user['fullname'] ?? 'Unknown User' }}</span>
+                                                        <span class="dash__text">John Doe</span>
 
-                                                        <span class="dash__text">{{ request()->auth_user['email'] }}</span>
+                                                        <span class="dash__text">johndoe@domain.com</span>
                                                         <div class="dash__link dash__link--secondary u-s-m-t-8">
 
                                                             <a data-modal="modal" data-modal-id="#dash-newsletter">Subscribe
@@ -238,8 +232,7 @@
                                                         <div class="dash__table-img-wrap">
 
                                                             <img class="u-img-fluid"
-                                                                src="images/product/electronic/product14.jpg"
-                                                                alt="">
+                                                                src="images/product/electronic/product14.jpg" alt="">
                                                         </div>
                                                     </td>
                                                     <td>

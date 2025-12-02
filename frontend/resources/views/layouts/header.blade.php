@@ -66,11 +66,18 @@
                                             <span>Signin</span></a>
                                     </li>
                                     <li>
+                                        <a href="#"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="fas fa-lock-open u-s-m-r-6"></i>
+                                            <span>Signout</span>
+                                        </a>
 
-                                        <a href="{{ route('register') }}"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                            <span>Signout</span></a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
                                     </li>
+
                                 </ul>
                                 <!--====== End - Dropdown ======-->
                             </li>
@@ -191,7 +198,7 @@
                                                     <a href="{{ route('shop.side_v2') }}"><i
                                                             class="fas fa-tv u-s-m-r-6"></i>
 
-                                                        <span>Electronics</span></a>
+                                                        <span>furniture</span></a>
 
                                                     <span class="js-menu-toggle js-toggle-mark"></span>
                                                 </li>
@@ -200,7 +207,7 @@
                                                     <a href="{{ route('shop.side_v2') }}"><i
                                                             class="fas fa-female u-s-m-r-6"></i>
 
-                                                        <span>Women's Clothing</span></a>
+                                                        <span>modern</span></a>
 
                                                     <span class="js-menu-toggle"></span>
                                                 </li>
@@ -209,40 +216,7 @@
                                                     <a href="{{ route('shop.side_v2') }}"><i
                                                             class="fas fa-male u-s-m-r-6"></i>
 
-                                                        <span>Men's Clothing</span></a>
-
-                                                    <span class="js-menu-toggle"></span>
-                                                </li>
-                                                <li>
-
-                                                    <a href="{{ route('shop.index') }}"><i class="fas fa-utensils u-s-m-r-6"></i>
-
-                                                        <span>Food & Supplies</span></a>
-
-                                                    <span class="js-menu-toggle"></span>
-                                                </li>
-                                                <li>
-
-                                                    <a href="{{ route('shop.index') }}"><i class="fas fa-couch u-s-m-r-6"></i>
-
-                                                        <span>Furniture & Decor</span></a>
-
-                                                    <span class="js-menu-toggle"></span>
-                                                </li>
-                                                <li>
-
-                                                    <a href="{{ route('shop.index') }}"><i
-                                                            class="fas fa-football-ball u-s-m-r-6"></i>
-
-                                                        <span>Sports & Game</span></a>
-
-                                                    <span class="js-menu-toggle"></span>
-                                                </li>
-                                                <li>
-
-                                                    <a href="{{ route('shop.index') }}"><i class="fas fa-heartbeat u-s-m-r-6"></i>
-
-                                                        <span>Beauty & Health</span></a>
+                                                        <span>classic</span></a>
 
                                                     <span class="js-menu-toggle"></span>
                                                 </li>
@@ -258,26 +232,23 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">3D PRINTER &
-                                                                SUPPLIES</a>
+                                                            <a href="{{ route('shop.side_v2') }}">chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">3d Printer</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Lounge chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">3d Printing Pen</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Office chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">3d Printing
-                                                                Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Gaming chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">3d Printer Module
-                                                                Board</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Rocking chair</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -285,26 +256,23 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">HOME AUDIO &
-                                                                VIDEO</a>
+                                                            <a href="{{ route('shop.side_v2') }}">table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">TV Boxes</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Coffee table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">TC Receiver &
-                                                                Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Office desk</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Display Dongle</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Nightstand</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Home Theater
-                                                                System</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Dining table</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -312,23 +280,24 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">MEDIA PLAYERS</a>
+                                                            <a href="{{ route('shop.side_v2') }}">cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Earphones</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Wardrobe</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Mp3 Players</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Shoe cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Speakers & Radios</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Bookshelf
+                                                                cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Microphones</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Display cabinet</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -336,23 +305,19 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">VIDEO GAME
-                                                                ACCESSORIES</a>
+                                                            <a href="{{ route('shop.side_v2') }}">shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Nintendo Video Games
-                                                                Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Wall shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Sony Video Games
-                                                                Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Floating shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Xbox Video Games
-                                                                Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Corner shelves</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -366,153 +331,30 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">SECURITY &
-                                                                PROTECTION</a>
+                                                            <a href="{{ route('shop.side_v2') }}">bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Security Cameras</a>
+                                                            <a href="{{ route('shop.side_v2') }}">folding bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Alarm System</a>
+                                                            <a href="{{ route('shop.side_v2') }}">single bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Security Gadgets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">CCTV Security &
-                                                                Accessories</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">PHOTOGRAPHY &
-                                                                CAMERA</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Digital Cameras</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Sport Camera &
-                                                                Accessories</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Camera
-                                                                Accessories</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Lenses &
-                                                                Accessories</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">ARDUINO
-                                                                COMPATIBLE</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Raspberry Pi & Orange
-                                                                Pi</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Module Board</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Smart Robot</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Board Kits</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">DSLR Camera</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Nikon Cameras</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Canon Camera</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Sony Camera</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">DSLR Lenses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">double bed</a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <!--====== End - Mega Menu Row ======-->
                                             <br>
-
-                                            <!--====== Mega Menu Row ======-->
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">NECESSARY
-                                                                ACCESSORIES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Flash Cards</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Memory Cards</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Flash Pins</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Compact Discs</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-9 mega-image">
-                                                    <div class="mega-banner">
-
-                                                        <a class="u-d-block" href="{{ route('shop.side_v2') }}">
-
-                                                            <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-0.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--====== End - Mega Menu Row ======-->
                                         </div>
                                         <!--====== End - Electronics ======-->
 
 
-                                        <!--====== Women ======-->
+                                        <!--====== Modern ======-->
                                         <div class="mega-menu-content">
 
                                             <!--====== Mega Menu Row ======-->
@@ -523,7 +365,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-1.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-1.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 mega-image">
@@ -532,7 +375,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-2.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-2.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -545,23 +389,26 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">HOT CATEGORIES</a>
+                                                            <a href="{{ route('shop.side_v2') }}">chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Dresses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern dining
+                                                                chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Blouses & Shirts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Minimalist chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">T-shirts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Contemporary
+                                                                armchair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Rompers</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Sleek office
+                                                                chair</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -569,24 +416,25 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">INTIMATES</a>
+                                                            <a href="{{ route('shop.side_v2') }}">table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Bras</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern coffee
+                                                                table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Brief Sets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Minimalist desk</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Bustiers &
-                                                                Corsets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern dining
+                                                                table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Panties</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Glass side table</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -594,23 +442,26 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">WEDDING & EVENTS</a>
+                                                            <a href="{{ route('shop.side_v2') }}">cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Wedding Dresses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern wardrobe</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Evening Dresses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Sliding door
+                                                                cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Prom Dresses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern TV
+                                                                cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Flower Dresses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Handle-less kitchen
+                                                                cabinet</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -618,23 +469,27 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">BOTTOMS</a>
+                                                            <a href="{{ route('shop.side_v2') }}">shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Skirts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Floating wall
+                                                                shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Shorts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Geometric
+                                                                shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Leggings</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Metal-frame
+                                                                shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Jeans</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern corner
+                                                                shelf</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -648,96 +503,23 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">OUTWEAR</a>
+                                                            <a href="{{ route('shop.side_v2') }}">bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Blazers</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Platform bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Basics Jackets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Upholstered bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Trench</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Modern queen bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Leather & Suede</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">JACKETS</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Denim Jackets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Trucker Jackets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Windbreaker
-                                                                Jackets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Leather Jackets</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">ACCESSORIES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Tech Accessories</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Headwear</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Baseball Caps</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Belts</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">OTHER ACCESSORIES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Bags</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Wallets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Watches</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Sunglasses</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Storage bed</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -753,7 +535,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-3.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-3.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 mega-image">
@@ -762,16 +545,17 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-4.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-4.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!--====== End - Mega Menu Row ======-->
                                         </div>
-                                        <!--====== End - Women ======-->
+                                        <!--====== End - Modern ======-->
 
 
-                                        <!--====== Men ======-->
+                                        <!--====== Classic ======-->
                                         <div class="mega-menu-content">
 
                                             <!--====== Mega Menu Row ======-->
@@ -782,7 +566,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-5.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-5.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 mega-image">
@@ -791,7 +576,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-6.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-6.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 mega-image">
@@ -800,7 +586,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-7.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-7.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -813,23 +600,27 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">HOT SALE</a>
+                                                            <a href="{{ route('shop.side_v2') }}">chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">T-Shirts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic carved
+                                                                armchair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Tank Tops</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Vintage lounge
+                                                                chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Polo</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Antique dining
+                                                                chair</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Shirts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Victorian accent
+                                                                chair</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -837,23 +628,27 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">OUTWEAR</a>
+                                                            <a href="{{ route('shop.side_v2') }}">table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Hoodies</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic carved
+                                                                dining table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Trench</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Antique coffee
+                                                                table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Parkas</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Vintage tea
+                                                                table</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Sweaters</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic wooden
+                                                                desk</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -861,23 +656,25 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">BOTTOMS</a>
+                                                            <a href="{{ route('shop.side_v2') }}">cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Casual Pants</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic wardrobe</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Cargo Pants</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Antique display
+                                                                cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Jeans</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Vintage book
+                                                                cabinet</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Shorts</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Carved sideboard</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -885,23 +682,27 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">UNDERWEAR</a>
+                                                            <a href="{{ route('shop.side_v2') }}">shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Boxers</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic wooden
+                                                                shelves</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Briefs</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Carved wall
+                                                                shelf</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Robes</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Vintage corner
+                                                                shelf</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Socks</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Decorative
+                                                                bookshelf</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -915,96 +716,27 @@
                                                     <ul>
                                                         <li class="mega-list-title">
 
-                                                            <a href="{{ route('shop.side_v2') }}">JACKETS</a>
+                                                            <a href="{{ route('shop.side_v2') }}">bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Denim Jackets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Classic carved
+                                                                bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Trucker Jackets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Vintage queen
+                                                                bed</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Windbreaker
-                                                                Jackets</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Royal-style bed
+                                                                frame</a>
                                                         </li>
                                                         <li>
 
-                                                            <a href="{{ route('shop.side_v2') }}">Leather Jackets</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">SUNGLASSES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Pilot</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Wayfarer</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Square</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Round</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">ACCESSORIES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Eyewear Frames</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Scarves</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Hats</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Belts</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <ul>
-                                                        <li class="mega-list-title">
-
-                                                            <a href="{{ route('shop.side_v2') }}">OTHER ACCESSORIES</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Bags</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Wallets</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Watches</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="{{ route('shop.side_v2') }}">Tech Accessories</a>
+                                                            <a href="{{ route('shop.side_v2') }}">Antique wooden
+                                                                bed</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1020,7 +752,8 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-8.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-8.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 mega-image">
@@ -1029,41 +762,14 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-9.jpg" alt=""></a>
+                                                                src="images/banners/banner-mega-9.jpg"
+                                                                alt=""></a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!--====== End - Mega Menu Row ======-->
                                         </div>
-                                        <!--====== End - Men ======-->
-
-
-                                        <!--====== No Sub Categories ======-->
-                                        <div class="mega-menu-content">
-                                            <h5>No Categories</h5>
-                                        </div>
-                                        <!--====== End - No Sub Categories ======-->
-
-
-                                        <!--====== No Sub Categories ======-->
-                                        <div class="mega-menu-content">
-                                            <h5>No Categories</h5>
-                                        </div>
-                                        <!--====== End - No Sub Categories ======-->
-
-
-                                        <!--====== No Sub Categories ======-->
-                                        <div class="mega-menu-content">
-                                            <h5>No Categories</h5>
-                                        </div>
-                                        <!--====== End - No Sub Categories ======-->
-
-
-                                        <!--====== No Sub Categories ======-->
-                                        <div class="mega-menu-content">
-                                            <h5>No Categories</h5>
-                                        </div>
-                                        <!--====== End - No Sub Categories ======-->
+                                        <!--====== End - Classic ======-->
                                     </div>
                                 </div>
                                 <!--====== End - Mega Menu ======-->
@@ -1100,233 +806,6 @@
 
                                 <span class="js-menu-toggle"></span>
                                 <ul style="width:170px">
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Home<i class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:118px">
-                                            <li>
-
-                                                <a href="{{ route('shop.index') }}">Home 1</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.index2') }}">Home 2</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.index3') }}">Home 3</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Account<i class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li>
-
-                                                <a href="{{ route('login') }}">Signin / Already Registered</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('register') }}">Signup / Register</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('password.request') }}">Lost Password</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a href="{{ route('dashboard') }}">Dashboard<i
-                                                class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                <a href="{{ route('dashboard') }}">Manage My Account<i
-                                                        class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:180px">
-                                                    <li>
-
-                                                        <a href="{{ route('dash.EditProfile') }}">Edit Profile</a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="{{ route('dash.address_book') }}">Edit Address Book</a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="{{ route('dash.ManageOrder') }}">Manage Order</a>
-                                                    </li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('dash.my_profile') }}">My Profile</a>
-                                            </li>
-                                            <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                <a href="{{ route('dash.address_book') }}">Address Book<i
-                                                        class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:180px">
-                                                    <li>
-
-                                                        <a href="{{ route('dash.AddressMakeDefault') }}">Address Make
-                                                            Default</a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="{{ route('dash.AddressAdd') }}">Add New Address</a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="{{ route('dash.AddressEdit') }}">Edit Address Book</a>
-                                                    </li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('dash.track_order') }}">Track Order</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('dash.my_order') }}">My Orders</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('dash.payment_option') }}">My Payment Options</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('dash.cancellation') }}">My Returns & Cancellations</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Empty<i class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li>
-
-                                                <a href="{{ route('empty.Search') }}">Empty Search</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('empty.Cart') }}">Empty Cart</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('empty.Wishlist') }}">Empty Wishlist</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Product Details<i
-                                                class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li>
-
-                                                <a href="{{ route('products.detail') }}">Product Details</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('products.DetailVariable') }}">Product Details Variable</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('products.DetailAffiliate') }}">Product Details
-                                                    Affiliate</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Shop Grid Layout<i
-                                                class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li>
-
-                                                <a href="{{ route('shop.GridLeft') }}">Shop Grid Left Sidebar</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.GridRight') }}">Shop Grid Right Sidebar</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.GridFull') }}">Shop Grid Full Width</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.side_v2') }}">Shop Side Version 2</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                        <a>Shop List Layout<i
-                                                class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:200px">
-                                            <li>
-
-                                                <a href="{{ route('shop.ListLeft') }}">Shop List Left Sidebar</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.ListRight') }}">Shop List Right Sidebar</a>
-                                            </li>
-                                            <li>
-
-                                                <a href="{{ route('shop.ListFull') }}">Shop List Full Width</a>
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
                                     <li>
 
                                         <a href="{{ route('cart') }}">Cart</a>
@@ -1368,19 +847,7 @@
                                 <ul style="width:200px">
                                     <li>
 
-                                        <a href="{{ route('blog.LeftSidebar') }}">Blog Left Sidebar</a>
-                                    </li>
-                                    <li>
-
-                                        <a href="{{ route('blog.RightSidebar') }}">Blog Right Sidebar</a>
-                                    </li>
-                                    <li>
-
                                         <a href="{{ route('blog.SidebarNone') }}">Blog Sidebar None</a>
-                                    </li>
-                                    <li>
-
-                                        <a href="{{ route('blog.Masonry') }}">Blog Masonry</a>
                                     </li>
                                     <li>
 
@@ -1388,14 +855,6 @@
                                     </li>
                                 </ul>
                                 <!--====== End - Dropdown ======-->
-                            </li>
-                            <li>
-
-                                <a href="{{ route('shop.side_v2') }}">VALUE OF THE DAY</a>
-                            </li>
-                            <li>
-
-                                <a href="{{ route('shop.side_v2') }}">GIFT CARDS</a>
                             </li>
                         </ul>
                         <!--====== End - List ======-->
@@ -1447,10 +906,12 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link" href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link"
+                                                        href="{{ route('products.detail') }}">
 
                                                         <img class="u-img-fluid"
-                                                            src="images/product/electronic/product3.jpg" alt=""></a>
+                                                            src="images/product/electronic/product3.jpg"
+                                                            alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
 
@@ -1479,7 +940,8 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link" href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link"
+                                                        href="{{ route('products.detail') }}">
 
                                                         <img class="u-img-fluid"
                                                             src="images/product/electronic/product18.jpg"
@@ -1512,16 +974,19 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link" href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link"
+                                                        href="{{ route('products.detail') }}">
 
                                                         <img class="u-img-fluid"
-                                                            src="images/product/women/product8.jpg" alt=""></a>
+                                                            src="images/product/women/product8.jpg"
+                                                            alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
 
                                                     <span class="mini-product__category">
 
-                                                        <a href="{{ route('shop.side_v2') }}">Women Clothing</a></span>
+                                                        <a href="{{ route('shop.side_v2') }}">Women
+                                                            Clothing</a></span>
 
                                                     <span class="mini-product__name">
 
@@ -1544,10 +1009,11 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link" href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link"
+                                                        href="{{ route('products.detail') }}">
 
-                                                        <img class="u-img-fluid"
-                                                            src="images/product/men/product8.jpg" alt=""></a>
+                                                        <img class="u-img-fluid" src="images/product/men/product8.jpg"
+                                                            alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
 
@@ -1583,7 +1049,8 @@
                                         </div>
                                         <div class="mini-action">
 
-                                            <a class="mini-link btn--e-brand-b-2" href="{{ route('checkout') }}">PROCEED TO
+                                            <a class="mini-link btn--e-brand-b-2"
+                                                href="{{ route('checkout') }}">PROCEED TO
                                                 CHECKOUT</a>
 
                                             <a class="mini-link btn--e-transparent-secondary-b-2"
