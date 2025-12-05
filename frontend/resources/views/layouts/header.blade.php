@@ -10,17 +10,17 @@
 
                 <a class="main-logo" href="{{ route('shop.index') }}">
 
-                    <img src="images/logo/logo-1.png" alt=""></a>
+                    <img src="{{ asset('images/logo/logo-1.png') }}" alt=""></a>
                 <!--====== End - Main Logo ======-->
 
 
                 <!--====== Search Form ======-->
-                <form class="main-form">
-
+                <form class="main-form" method="GET" action="{{ route('shop.side_v2') }}">
                     <label for="main-search"></label>
 
-                    <input class="input-text input-text--border-radius input-text--style-1" type="text"
-                        id="main-search" placeholder="Search">
+                    <input class="input-text input-text--border-radius input-text--style-1"
+                        type="text" id="main-search" name="search"
+                        value="{{ request('search') }}" placeholder="Search">
 
                     <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button>
                 </form>
@@ -365,7 +365,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-1.jpg"
+                                                                src={{ asset('images/banners/banner-mega-1.jpg') }}
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -375,7 +375,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-2.jpg"
+                                                                src={{ asset('images/banners/banner-mega-2.jpg') }}
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -535,7 +535,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-3.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-3.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -545,7 +545,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-4.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-4.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -566,7 +566,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-5.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-5.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -576,7 +576,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-6.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-6.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -586,7 +586,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-7.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-7.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -752,7 +752,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-8.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-8.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -762,7 +762,7 @@
                                                         <a class="u-d-block" href="{{ route('shop.side_v2') }}">
 
                                                             <img class="u-img-fluid u-d-block"
-                                                                src="images/banners/banner-mega-9.jpg"
+                                                                src="{{ asset('images/banners/banner-mega-9.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -906,11 +906,10 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link"
-                                                        href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link" href="#">
 
                                                         <img class="u-img-fluid"
-                                                            src="images/product/electronic/product3.jpg"
+                                                            src="{{ asset('images/product/electronic/product3.jpg') }}"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
@@ -921,7 +920,7 @@
 
                                                     <span class="mini-product__name">
 
-                                                        <a href="{{ route('products.detail') }}">Yellow Wireless
+                                                        <a href="#">Yellow Wireless
                                                             Headphone</a></span>
 
                                                     <span class="mini-product__quantity">1 x</span>
@@ -940,11 +939,10 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link"
-                                                        href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link" href="#">
 
                                                         <img class="u-img-fluid"
-                                                            src="images/product/electronic/product18.jpg"
+                                                            src="{{ asset('images/product/electronic/product18.jpg') }}"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
@@ -955,7 +953,7 @@
 
                                                     <span class="mini-product__name">
 
-                                                        <a href="{{ route('products.detail') }}">Nikon DSLR Camera
+                                                        <a href="#">Nikon DSLR Camera
                                                             4k</a></span>
 
                                                     <span class="mini-product__quantity">1 x</span>
@@ -974,11 +972,10 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link"
-                                                        href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link" href="#">
 
                                                         <img class="u-img-fluid"
-                                                            src="images/product/women/product8.jpg"
+                                                            src="{{ asset('images/product/women/product8.jpg') }}"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
@@ -990,7 +987,7 @@
 
                                                     <span class="mini-product__name">
 
-                                                        <a href="{{ route('products.detail') }}">New Dress D Nice
+                                                        <a href="#">New Dress D Nice
                                                             Elegant</a></span>
 
                                                     <span class="mini-product__quantity">1 x</span>
@@ -1009,10 +1006,10 @@
                                             <div class="mini-product">
                                                 <div class="mini-product__image-wrapper">
 
-                                                    <a class="mini-product__link"
-                                                        href="{{ route('products.detail') }}">
+                                                    <a class="mini-product__link" href="#">
 
-                                                        <img class="u-img-fluid" src="images/product/men/product8.jpg"
+                                                        <img class="u-img-fluid"
+                                                            src="{{ asset('images/product/men/product8.jpg') }}"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-product__info-wrapper">
@@ -1023,7 +1020,7 @@
 
                                                     <span class="mini-product__name">
 
-                                                        <a href="{{ route('products.detail') }}">New Fashion D Nice
+                                                        <a href="#">New Fashion D Nice
                                                             Elegant</a></span>
 
                                                     <span class="mini-product__quantity">1 x</span>
