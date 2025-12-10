@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthProxyController;
 use Illuminate\Support\Facades\Cookie;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartPageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,7 @@ Route::view('/blogMasonry', 'blog.blogMasonry')->name('blog.Masonry');
 | SHOP
 |--------------------------------------------------------------------------
 */
+
 
 Route::get('/index', [ProductController::class, 'index'])->name('shop.index');
 Route::view('/index2', 'shop.index2')->name('shop.index2');
@@ -44,8 +47,10 @@ Route::view('/productDetailAffiliate', 'products.productDetailAffiliate')->name(
 Route::view('/productDetailVariable', 'products.productDetailVariable')->name('products.DetailVariable');
 Route::get('/product/{id}', [ProductController::class, 'detail'])->name('products.detail');
 Route::view('/checkout', 'products.checkout')->name('checkout');
-Route::view('/cart', 'cart')->name('cart');
+// Route::view('/cart', 'cart')->name('cart');
 Route::get('/shop_side_v2', [ProductController::class, 'shop'])->name('shop.side_v2');
+Route::get('/cart', [CartPageController::class, 'index'])->name('cart');
+
 
 
 // Login page
@@ -116,6 +121,7 @@ Route::view('/contact', 'contact')->name('contact');
 Route::view('/wishlist', 'wishlist')->name('wishlist');
 
 
+
 /*
 |--------------------------------------------------------------------------
 | ADMIN PANEL (VIEW ONLY) - Protected Routes
@@ -171,3 +177,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return redirect()->route('login');
     })->name('logout');
 });
+
