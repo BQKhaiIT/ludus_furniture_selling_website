@@ -31,6 +31,7 @@ use App\Controllers\ProductImageController;
 $product = new ProductController();
 $category = new CategoryController();
 $image = new ProductImageController();
+$controller = new ProductController();
 
 $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $method = $_SERVER["REQUEST_METHOD"];
@@ -42,6 +43,18 @@ $method = $_SERVER["REQUEST_METHOD"];
 // GET /products → list
 if ($uri === "/products" && $method === "GET") {
     echo json_encode($product->getAllProducts());
+    exit;
+}
+/**
+ * BULK PRODUCTS – cho Wishlist service
+ */
+if ($uri === '/products/bulk' && $method === 'POST') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $ids  = $data['ids'] ?? [];
+
+    echo json_encode(
+        $controller->getProductsByIds($ids)
+    );
     exit;
 }
 

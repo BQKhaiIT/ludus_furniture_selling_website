@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -48,6 +49,10 @@ class ProductController extends Controller
         $latest     = Http::get("$this->api/products/latest")->json();
         $featured   = Http::get("$this->api/products/top-rated")->json();
 
+        Log::info('CATEGORIES RAW', [
+            'categories' => $categories,
+            'type' => gettype($categories)
+        ]);
         $productsByCate = [];
         foreach ($categories as $cate) {
             $productsByCate[$cate['id']] =
