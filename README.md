@@ -1,43 +1,51 @@
+# 🏡 Interior Furniture Website (Laravel)
 
-🏡 Interior Website – Laravel
+A modern interior furniture e-commerce website built with **pure Laravel**, focusing on clean architecture, practical features, and real-world use cases.
 
-Dự án website nội thất hiện đại được xây dựng bằng Laravel thuần, gồm các chức năng cơ bản cho một trang bán hàng.
+This project demonstrates my experience in building a full-featured web application using Laravel, from backend logic to user-facing interfaces.
 
-🚀 Chức năng
+---
 
-Quản lý sản phẩm
+## ✨ Features
 
-Danh mục nội thất
+- Product management system
+- Interior furniture categories
+- 3D product visualization
+- User authentication (register / login)
+- Shopping cart and checkout flow
+- Email notification system
+- Complete and responsive user interface
 
-Hiển thị mô hình 3D sản phẩm
+---
 
-Đăng ký / đăng nhập
+## 🛠️ Tech Stack
 
-Giỏ hàng & thanh toán
+- **Laravel** – Backend framework
+- **MySQL** – Relational database
+- **Blade Template** – Server-side rendering
+- **Three.js** – 3D product visualization
+- **Bootstrap / TailwindCSS** – UI styling
 
-Gửi email thông báo
+---
 
-Giao diện người dùng (UI) đầy đủ
+## 🎯 Project Purpose
 
-🛠 Công nghệ sử dụng
+This is a **personal project** built to practice and showcase my skills in:
 
-Laravel
+- Laravel backend development
+- MVC architecture and clean code practices
+- Integrating frontend features with backend logic
+- Building real-world e-commerce functionalities
 
-MySQL
+The source code is provided **for demonstration purposes only** and is not intended for public reuse or redistribution.
 
-Blade Template
+---
 
-Three.js (hiển thị 3D)
+## 👤 Author
 
-Bootstrap / TailwindCSS
+**Khai (BQKhaiIT)**  
+Laravel Developer  
 
-khởi chạy dự án
-## 🚀 Khởi chạy dự án
+If you are a recruiter or developer reviewing this project and would like to discuss the implementation details, feel free to reach out.
 
-| Service           | Lệnh chạy                                                         |
-|------------------|------------------------------------------------------------------|
-| **Frontend**      | `php artisan serve --host=127.0.0.1 --port=8000`                 |
-| **Auth Service**  | `php -S 127.0.0.1:8001`                                          |
-| **Payment Service** | `php artisan serve --port=8004`                               |
-| **Product Service** | `php -S 127.0.0.1:8003 -t . index.php`                        |
-| **Order Service** | `php artisan serve --port=8002`                                  |
+---
