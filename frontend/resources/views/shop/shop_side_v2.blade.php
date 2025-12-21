@@ -627,46 +627,47 @@
             });
 
         });
-    </script><script>
-document.addEventListener("DOMContentLoaded", async function () {
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
 
-    function getCookie(name) {
-        const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-        return match ? match[2] : null;
-    }
+            function getCookie(name) {
+                const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+                return match ? match[2] : null;
+            }
 
-    const token = getCookie("auth_token");
-    if (!token) return; // chưa login → tim rỗng là đúng
+            const token = getCookie("auth_token");
+            if (!token) return; // chưa login → tim rỗng là đúng
 
-    try {
-        const res = await fetch("http://127.0.0.1:8005/api/wishlist", {
-            headers: {
-                "Authorization": "Bearer " + token
+            try {
+                const res = await fetch("http://127.0.0.1:8005/api/wishlist", {
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                });
+
+                if (!res.ok) return;
+
+                const wishlistItems = await res.json();
+
+                // lấy danh sách product_id đã wishlist
+                const wishlistIds = wishlistItems.map(item => Number(item.id));
+
+                // set tim đỏ tương ứng
+                document.querySelectorAll(".wishlist-btn").forEach(btn => {
+                    const pid = Number(btn.dataset.productId);
+
+                    if (wishlistIds.includes(pid)) {
+                        btn.classList.remove("far");
+                        btn.classList.add("fas", "u-c-brand");
+                    }
+                });
+
+            } catch (err) {
+                console.error("Load wishlist state failed:", err);
             }
         });
-
-        if (!res.ok) return;
-
-        const wishlistItems = await res.json();
-
-        // lấy danh sách product_id đã wishlist
-        const wishlistIds = wishlistItems.map(item => Number(item.id));
-
-        // set tim đỏ tương ứng
-        document.querySelectorAll(".wishlist-btn").forEach(btn => {
-            const pid = Number(btn.dataset.productId);
-
-            if (wishlistIds.includes(pid)) {
-                btn.classList.remove("far");
-                btn.classList.add("fas", "u-c-brand");
-            }
-        });
-
-    } catch (err) {
-        console.error("Load wishlist state failed:", err);
-    }
-});
-</script>
+    </script>
 
 @endsection
 {{-- 4. Kết thúc phần nội dung --}}
