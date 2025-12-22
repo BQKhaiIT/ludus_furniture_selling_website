@@ -51,18 +51,28 @@ class Review {
         }, $rows);
     }
 
-    public static function stats($productId) {
-        $db = Database::connect();
+    public static function stats($productId)
+{
+    $db = Database::connect();
 
-        $stmt = $db->prepare("
-            SELECT COUNT(*) total, AVG(rating) avg_rating
-            FROM reviews
-            WHERE product_id = ?
-        ");
-        $stmt->execute([$productId]);
+    $stmt = $db->prepare("
+        SELECT 
+            COUNT(*) AS total,
+            IFNULL(ROUND(AVG(rating), 1), 0) AS avg_rating
+        FROM reviews
+        WHERE product_id = ?
+    ");
 
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
+    $stmt->execute([$productId]);
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return [
+        'total' => (int) $row['total'],
+        'avg_rating' => (float) $row['avg_rating']
+    ];
+}
+
 
     // UPDATED: check reviewed
     public static function exists($productId, $userId) {
