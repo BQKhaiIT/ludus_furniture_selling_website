@@ -39,13 +39,3 @@ This is a **personal project** built to practice and showcase my skills in:
 
 The source code is provided **for demonstration purposes only** and is not intended for public reuse or redistribution.
 
----
-
-## 👤 Author
-
-**Khai (BQKhaiIT)**  
-Laravel Developer  
-
-If you are a recruiter or developer reviewing this project and would like to discuss the implementation details, feel free to reach out.
-
----
